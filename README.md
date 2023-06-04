@@ -1,16 +1,32 @@
-# Deal Sonar
+# Beluga.
 
 This API as the vocation to distribute and compare the best value of travel website for the moment.
 
 The idea is to compare the best value of travel website and to give the best price to the user.
 
 ## Table of Contents
-1. [Example](#example)
-2. [Example2](#example2)
-3. [Third Example](#third-example)
-4. [Fourth Example](#fourth-examplehttpwwwfourthexamplecom)
+1. [How does it work](#How-does-it-work-?)
+2. [Run the API](#example2)
+<!-- 3. [Third Example](#third-example)
+4. [Fourth Example](#fourth-examplehttpwwwfourthexamplecom) -->
 
 ## How does it work ?
+Each API is a method that return a list of dictionnary with the best value of the website.
+
+## Run the API
+Clone the project on your computer.
+```bash
+git clone https://github.com/OliveCh12/deals-sonar.git
+```
+
+```bash
+cd deals-sonar
+pip install requirement 
+```
+Run the project by this commannd
+```bash
+uvicorn main:app --reload
+```
 
 ## Contributing
 
