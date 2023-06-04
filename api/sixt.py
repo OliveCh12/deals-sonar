@@ -37,16 +37,17 @@ def compare_results(days: int = 3):
    # Fetch results for the second item of the url list generate_url_yearly(3)[1]
    response = requests.get(generate_url_yearly(days)[2])
    data = response.json()
-
+   
 #    print(generate_url_yearly(days)[2])
    # Get pendulum date from data['info']['pickupDate'] and data['info']['returnDate']
    pickupDate = pendulum.parse(data['info']['pickupDate'])
    returnDate = pendulum.parse(data['info']['returnDate'])
    infos = {
+         'Location': "Rueil-Malmaison/Nanterre",
          'pickupStation': data['info']['pickupStationId'],
          'returnStation': data['info']['returnStationId'],
-         'pickupDate': pickupDate.format("DD/MM/YYYY"),
-         'returnDate': returnDate.format("DD/MM/YYYY"),
+         'pickupDate': pickupDate,
+         'returnDate': returnDate,
          'duration': pickupDate.diff_for_humans(returnDate, absolute=True),
    }
    # Generate a list of offers of one url and put 

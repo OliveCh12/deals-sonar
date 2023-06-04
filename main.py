@@ -1,12 +1,6 @@
 from typing import Union
-from fastapi import FastAPI, APIRouter
-
+from fastapi import FastAPI
 from api.sixt import compare_results
-
-router = APIRouter()
-
-# from api.sixt import generate_url_yearly
-from api.sixt import stations_list as StationsList
 
 app = FastAPI()
 
